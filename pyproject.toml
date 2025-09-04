@@ -27,8 +27,8 @@ poetry-dynamic-versioning = { version = ">=1.0.0,<2.0.0", extras = ["plugin"] }
 enable = true
 
 [tool.poetry.urls]
-Homepage = "https://github.com/odashi/cloud-storage-mocker"
-"Bug Tracker" = "https://github.com/odashi/cloud-storage-mocker/issues"
+Homepage = "https://github.com/CroudTech/cloud-storage-mocker"
+"Bug Tracker" = "https://github.com/CroudTech/cloud-storage-mocker/issues"
 
 [tool.poetry.dependencies]
 python = ">=3.8, <3.14"
