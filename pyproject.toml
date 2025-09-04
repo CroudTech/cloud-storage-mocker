@@ -51,10 +51,10 @@ exclude = [
 only-packages = true
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/cloud_storage_mocker"]
+packages = ["src/ct_cloud_storage_mocker"]
 
 [tool.hatch.version]
-path = "src/cloud_storage_mocker/_version.py"
+path = "src/ct_cloud_storage_mocker/_version.py"
 
 [tool.flake8]
 max-line-length = 88
