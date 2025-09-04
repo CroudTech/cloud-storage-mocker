@@ -2,7 +2,7 @@
 dynamic = ["version"]
 
 name = "ct-cloud-storage-mocker"
-version = "0.0.0"
+
 description = "Mocker library of Google Cloud Storage with local filesystem mounting. Update for python3.13 compatibility"
 authors = [
     { name = "Jim Robinson", email = "jim.robinson@croud.com" },
@@ -19,6 +19,10 @@ classifiers = [
 ]
 license = "MIT"
 readme = "README.md"
+
+[tool.poetry]
+version = "0.0.0"
+
 
 [tool.poetry.requires-plugins]
 poetry-dynamic-versioning = { version = ">=1.0.0,<2.0.0", extras = ["plugin"] }
