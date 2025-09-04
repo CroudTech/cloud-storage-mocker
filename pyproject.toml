@@ -1,25 +1,9 @@
-[build-system]
-requires = [
-    "hatchling",
-]
-build-backend = "hatchling.build"
-
-[project]
-name = "cloud-storage-mocker"
-description = "Mocker library of Google Cloud Storage with local filesystem mounting."
-readme = "README.md"
-requires-python = ">=3.8, <3.13"
-license = {text = "MIT License"}
-authors = [
-    {name = "Yusuke Oda", email = "odashi@inspiredco.ai"}
-]
-keywords = [
-    "cloud storage",
-    "gcloud",
-    "google",
-    "google cloud",
-    "storage",
-]
+[tool.poetry]
+name = "ct-cloud-storage-mocker"
+version = "0.1.0"
+description = "Mocker library of Google Cloud Storage with local filesystem mounting. Update for python3.13 compatibility"
+authors = ["Yusuke Oda <odashi@inspiredco.ai>", "Jim Robinson <jim.robinson@croud.com>"]
+keywords = ["cloud storage", "gcloud", "google", "google cloud", "storage"]
 classifiers = [
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3.8",
@@ -28,30 +12,34 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
 ]
-dependencies = [
-    "google-cloud-storage>=2.7.0",
-]
-dynamic = [
-    "version"
-]
+license = "MIT"
+readme = "README.md"
 
-[project.optional-dependencies]
-dev = [
-    "black>=22.10",
-    "flake8>=5.0",
-    "isort>=5.10",
-    "mypy>=0.991",
-    "pyproject-flake8>=5.0",
-    "pytest>=7.1",
-]
-mypy = [
-    "mypy>=0.991",
-    "pytest>=7.1",
-]
-
-[project.urls]
+[tool.poetry.urls]
 Homepage = "https://github.com/odashi/cloud-storage-mocker"
 "Bug Tracker" = "https://github.com/odashi/cloud-storage-mocker/issues"
+
+[tool.poetry.dependencies]
+python = ">=3.8, <3.14"
+google-cloud-storage = ">=2.7.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = ">=22.10"
+flake8 = ">=5.0"
+isort = ">=5.10"
+mypy = ">=0.991"
+pyproject-flake8 = ">=5.0"
+pytest = ">=7.1"
+
+
+[tool.poetry.group.mypy.dependencies]
+mypy = ">=0.991"
+pytest = ">=7.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
 
 [tool.hatch.build]
 include = [
