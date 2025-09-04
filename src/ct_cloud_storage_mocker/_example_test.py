@@ -3,6 +3,7 @@
 import pathlib
 
 import google.cloud.storage  # type: ignore[import-untyped]
+
 from ct_cloud_storage_mocker import BlobMetadata, Mount
 from ct_cloud_storage_mocker import patch as gcs_patch
 
