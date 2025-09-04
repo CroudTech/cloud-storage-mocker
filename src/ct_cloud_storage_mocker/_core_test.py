@@ -13,7 +13,7 @@ CopiedClient = google.cloud.storage.Client
 CopiedBucket = google.cloud.storage.Bucket
 CopiedBlob = google.cloud.storage.Blob
 
-from cloud_storage_mocker import BlobMetadata, Mount, patch  # noqa: E402
+from ct_cloud_storage_mocker import BlobMetadata, Mount, patch  # noqa: E402
 
 
 def _prepare_dirs(root_path: pathlib.Path) -> tuple[pathlib.Path, pathlib.Path]:
