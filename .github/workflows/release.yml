@@ -19,6 +19,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install poetry==2.1.4
+          poetry config pypi-token.pypi ${{ secrets.PYPI_API_TOKEN }}
           poetry install --with dev
-          poetry publish --repository=pypy --password=${{ secrets.PYPI_API_TOKEN }} --username=__TOKEN__ --build
+          poetry publish --build
 
