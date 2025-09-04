@@ -1,8 +1,13 @@
-[tool.poetry]
+[project]
+dynamic = ["version"]
+
 name = "ct-cloud-storage-mocker"
-version = "0.1.0"
+version = "0.0.0"
 description = "Mocker library of Google Cloud Storage with local filesystem mounting. Update for python3.13 compatibility"
-authors = ["Yusuke Oda <odashi@inspiredco.ai>", "Jim Robinson <jim.robinson@croud.com>"]
+authors = [
+    { name = "Jim Robinson", email = "jim.robinson@croud.com" },
+    { name = "Yusuke Oda", email = "odashi@inspiredco.ai" },
+]
 keywords = ["cloud storage", "gcloud", "google", "google cloud", "storage"]
 classifiers = [
     "License :: OSI Approved :: MIT License",
@@ -14,6 +19,12 @@ classifiers = [
 ]
 license = "MIT"
 readme = "README.md"
+
+[tool.poetry.requires-plugins]
+poetry-dynamic-versioning = { version = ">=1.0.0,<2.0.0", extras = ["plugin"] }
+
+[tool.poetry-dynamic-versioning]
+enable = true
 
 [tool.poetry.urls]
 Homepage = "https://github.com/odashi/cloud-storage-mocker"
