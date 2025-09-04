@@ -16,7 +16,7 @@ pip install cloud-storage-mocker
 For package developers:
 
 ```shell
-git clone git@github.com:odashi/cloud-storage-mocker
+git clone git@github.com:CroudTech/cloud-storage-mocker
 cd cloud-storage-mocker
 python -m venv venv
 source venv/bin/activate
