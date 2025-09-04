@@ -18,9 +18,7 @@ For package developers:
 ```shell
 git clone git@github.com:CroudTech/cloud-storage-mocker
 cd cloud-storage-mocker
-python -m venv venv
-source venv/bin/activate
-pip install -e '.[dev]'
+poetry install --with dev --no-root
 ```
 
 
